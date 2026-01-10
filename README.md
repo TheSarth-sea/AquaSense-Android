@@ -16,4 +16,5 @@ AquaSense is a smart water consumption monitoring and reduction system.
 - SQLite
 
 ## Developed By
-BTech 2nd Year – Group Project
+Sarth Patil
+Engineer Student
