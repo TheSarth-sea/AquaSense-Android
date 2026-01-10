@@ -17,4 +17,4 @@ AquaSense is a smart water consumption monitoring and reduction system.
 
 ## Developed By
 Sarth Patil
-Engineer Student
+
