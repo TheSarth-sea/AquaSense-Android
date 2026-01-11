@@ -11,6 +11,7 @@
         android:theme="@style/Theme.AquaSense">
 
         <activity android:name=".SetupActivity" />
+        <activity android:name=".HomeActivity" />
 
         <activity
             android:name=".MainActivity"
