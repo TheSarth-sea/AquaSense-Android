@@ -4,6 +4,9 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
+import android.content.Intent;
+import android.widget.Button;
+
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -17,11 +20,18 @@ public class HomeActivity extends AppCompatActivity {
         TextView tvUsed = findViewById(R.id.tvUsed);
         TextView tvRemaining = findViewById(R.id.tvRemaining);
 
+        Button btnAddWater = findViewById(R.id.btnAddWater);
+
+        btnAddWater.setOnClickListener(v ->
+                startActivity(new Intent(this, AddWaterActivity.class))
+        );
+
+
         SharedPreferences prefs = getSharedPreferences("AquaSensePrefs", MODE_PRIVATE);
         String name = prefs.getString("name", "User");
         int limit = prefs.getInt("limit", 0);
 
-        int used = 0; // we will update this later
+        int used = prefs.getInt("used", 0);
         int remaining = limit - used;
 
         tvWelcome.setText("Welcome, " + name);
