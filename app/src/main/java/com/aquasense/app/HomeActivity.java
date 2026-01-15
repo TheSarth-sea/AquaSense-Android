@@ -19,6 +19,7 @@ import com.github.mikephil.charting.data.BarEntry;
 import java.util.ArrayList;
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
 import com.github.mikephil.charting.components.YAxis;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 
 
@@ -28,6 +29,7 @@ public class HomeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 

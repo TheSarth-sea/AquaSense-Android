@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
+    alias(libs.plugins.google.services)
 }
 
 android {
@@ -46,5 +47,8 @@ dependencies {
 
     // MPAndroidChart (charts & animations)
     implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
+    implementation("com.google.firebase:firebase-firestore:24.10.0")
+
+
 
 }
