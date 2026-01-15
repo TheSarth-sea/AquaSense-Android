@@ -1,40 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="24dp"
     android:background="#E3F2FD">
 
-    <TextView
-        android:id="@+id/tvLimit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Daily Limit"
-        android:textSize="18sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/tvUsed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Used Today"
-        android:textSize="18sp"
-        android:layout_marginTop="12dp" />
-
-    <ProgressBar
-        android:id="@+id/progressWater"
-        style="?android:attr/progressBarStyleHorizontal"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:max="100"
-        android:layout_marginTop="20dp" />
+        android:orientation="vertical"
+        android:padding="20dp">
 
-    <Button
-        android:id="@+id/btnAddWater"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Add 1L Water"
-        android:layout_marginTop="30dp" />
+        <TextView
+            android:id="@+id/tvLimit"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:text="Daily Limit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/tvUsed"
+            android:textSize="16sp"
+            android:text="Used Today"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ProgressBar
+            android:id="@+id/progressWater"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:max="100"
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btnAddWater"
+            android:text="Add 1L Water"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btnSettings"
+            android:text="Change Daily Limit"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/barChart"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"/>
+
+    </LinearLayout>
+</ScrollView>

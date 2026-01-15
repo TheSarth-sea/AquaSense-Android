@@ -48,6 +48,8 @@ dependencies {
     // MPAndroidChart (charts & animations)
     implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
     implementation("com.google.firebase:firebase-firestore:24.10.0")
+    implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
+
 
 
 
