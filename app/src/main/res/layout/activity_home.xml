@@ -1,95 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_gradient">
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#E3F2FD">
 
+    <TextView
+        android:id="@+id/tvLimit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Daily Limit"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/tvUsed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Used Today"
+        android:textSize="18sp"
+        android:layout_marginTop="12dp" />
+
+    <ProgressBar
+        android:id="@+id/progressWater"
+        style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:max="100"
+        android:layout_marginTop="20dp" />
 
-        <!-- DASHBOARD CARD -->
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            app:cardElevation="6dp"
-            app:cardCornerRadius="14dp">
+    <Button
+        android:id="@+id/btnAddWater"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add 1L Water"
+        android:layout_marginTop="30dp" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="16dp">
-
-                <TextView
-                    android:id="@+id/tvWelcome"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Welcome"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/tvLimit"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="Daily Limit: 0 L" />
-
-                <ProgressBar
-                    android:id="@+id/progressWater"
-                    style="?android:attr/progressBarStyleHorizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:max="100"
-                    android:progress="0" />
-
-                <TextView
-                    android:id="@+id/tvUsed"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="Used Today: 0 L" />
-
-                <TextView
-                    android:id="@+id/tvRemaining"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Remaining: 0 L"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-        </com.google.android.material.card.MaterialCardView>
-
-        <!-- BAR CHART -->
-        <com.github.mikephil.charting.charts.BarChart
-            android:id="@+id/barChart"
-            android:layout_width="match_parent"
-            android:layout_height="260dp"
-            android:layout_marginBottom="16dp" />
-
-        <!-- INSIGHT TEXT -->
-        <TextView
-            android:id="@+id/tvInsight"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Start tracking daily to see insights."
-            android:textStyle="italic"
-            android:layout_marginBottom="16dp" />
-
-        <!-- ADD WATER BUTTON -->
-        <Button
-            android:id="@+id/btnAddWater"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Add Water Usage" />
-
-    </LinearLayout>
-</ScrollView>
+</LinearLayout>
